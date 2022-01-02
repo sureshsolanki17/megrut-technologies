@@ -13,11 +13,17 @@ window.addEventListener("scroll", () => {
 // for nav toggale
 function toggleFanc() {
     const navgtionJs = document.getElementById("navjs");
-    if (navgtionJs.className === "navbar-nav me-lg-5") {
-        navgtionJs.style.display = "block";
-        console.log(215465);
+    if (navgtionJs.className === "navbar-nav" && document.body.offsetWidth < 992) {
+        navgtionJs.classList.remove("navbar-nav");
+        navgtionJs.classList.add("new-navbar");
+        document.body.style.overflowX = "none";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        document.body.style.overflow = "hidden" ;
     } else {
-        navgtionJs.className = "navbar-nav me-lg-5";
+        navgtionJs.className = "navbar-nav";
+        navgtionJs.classList.add("navbar-nav");
+        document.body.style.backgroundColor = "white";
+        document.body.style.overflow = "visible" ;
     }
 }
 // for card upswip animation 
@@ -26,14 +32,8 @@ window.addEventListener("scroll", () => {
         document.querySelector("#mycard1").classList.add("slideUp");
         document.querySelector("#mycard2").classList.add("slideUp");
         document.querySelector("#mycard3").classList.add("slideUp");
-        // document.querySelector("#mycard4").classList.add("slideUp");
-        // document.querySelector("#mycard5").classList.add("slideUp");
-        // document.querySelector("#mycard6").classList.add("slideUp");
     }
     if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
-        // document.querySelector("#mycard1").classList.add("slideUp");
-        // document.querySelector("#mycard2").classList.add("slideUp");
-        // document.querySelector("#mycard3").classList.add("slideUp");
         document.querySelector("#mycard4").classList.add("slideUp");
         document.querySelector("#mycard5").classList.add("slideUp");
         document.querySelector("#mycard6").classList.add("slideUp");

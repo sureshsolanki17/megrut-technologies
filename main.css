@@ -19,12 +19,20 @@
 .bubble-39{
     position: absolute;
     z-index: -10;
+    animation-name: bubbles;
+    animation-duration: 1s;
 }
 .bubble-38{
     position: absolute;
     right: 10%;
     top: 20vh;
     z-index: -10;
+    animation-name: bubbles;
+    animation-duration: 1s;
+}
+@keyframes bubbles {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
 }
 /* slide navgation bar */
 /* .nav-togal-btn{
@@ -38,7 +46,37 @@
     background-color: #fff;
 } */
 /* toggal */
-
+.new-navbar{
+    height: 100vh;
+    width: 300px;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    animation-name: slidshowBar;
+    animation-duration: 1s;
+    /* transition: all 1s ease; */
+}
+@keyframes slidshowBar {
+    0% {transform: translate(-300px);}
+    100% {transform: translate(0px);}
+}
+.close-btn{
+    font-size: 16px;
+    color: black;
+    padding: 1.5px 8px;
+    margin-right: 1.5rem;
+    border: 1px solid #525250;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all .7s ease;
+}
+.close-btn:hover{
+    color: #ffffff;
+    background-color: var(--hover-color);
+    border: 1px solid #5158be;
+}
 /* sticky navgation */
 .sticky-nv {
     position: fixed !important;
@@ -75,12 +113,9 @@
     .navbar-nav{
         display: none !important;
     }
-    .responsive{
-        position: relative;
-        display: none !important;
-        background-color: red !important;
-    }
+    
 }
+
 .nav_link, .drop-link{
     text-decoration: none;
     color: #000;
@@ -123,10 +158,25 @@
     animation-name: dropanimation;
     animation-duration: .5s;
     transition: all .5s ease;
-}
+} 
 @keyframes dropanimation {
     0% {opacity: 0; transform: translateX(50px);}
     100% {opacity: 1; transform: translateX(0);}
+}
+@media screen and (max-width: 960px) {
+    .i-animation{
+        float: right;
+        padding-right: 4rem;
+    }
+    .drop-li{
+        display: none;
+        width: 250px;
+        left: 250px;
+    }   
+    .nav-item:hover .drop-li{
+        display: block;
+        overflow: inherit;
+    }
 }
 .drop-li-link{
     margin-bottom: 1rem;
@@ -179,8 +229,13 @@
 .nav-button:hover .nav-button-3, .nav-button-2{
     width: 20px;
 }
-/* ------ animation ----- */
-
+/* ------ animation for icons----- */
+.i-animation{
+    transition: all .4s ease;
+}
+.nav-item:hover .i-animation{
+    transform: rotate(180deg);
+}
 /* -------------- hero section --------- */
 .hero-section{
     height: 80vh;
