@@ -1,10 +1,13 @@
 // for sticky navgtion bar
 window.addEventListener("scroll", () => {
     let navbarStk = document.getElementById("sticky-nav");
+    let naavButton = document.getElementById("js-nav-button");
     if (window.pageYOffset >= 120) {
         navbarStk.classList.add("sticky-nv");
+        naavButton.classList.add("new-nav-btn");
     } if (window.pageYOffset <= 120) {
         navbarStk.classList.remove("sticky-nv");
+        naavButton.classList.remove("new-nav-btn");
     }
 })
 // for nav toggale

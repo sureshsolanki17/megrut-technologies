@@ -42,6 +42,7 @@
 /* sticky navgation */
 .sticky-nv {
     position: fixed !important;
+    z-index: 1000;
     top: 0;
     width: 100%;
     background-color: #fff;
@@ -148,7 +149,12 @@
     flex-direction: column;
     position: relative;
 }
-
+.new-nav-btn{
+    background-color: rgb(70, 66, 66);
+}
+.new-nav-btn div{
+    background-color: #fff !important;
+}
 .nav-button-1{
     width: 20px;
     height: 2px;
@@ -319,7 +325,7 @@
     position: absolute;
     content: " ";
     background-color: var(--hover-color);
-    width: 100%;
+    width: 0;
     height: 2px;
     left: 0;
     top: 110%;
@@ -451,9 +457,9 @@
 .Project-list p:hover{
     cursor: pointer;
 }
-/* .Project-link{
+.Project-link{
     position: relative;
-} */
+} 
 .Project-link::after{
     content: " ";
     background-color: var(--hover-color);
@@ -532,7 +538,7 @@
     border-radius: 50%;
 }
 .tes-cars{
-    transition: all .2s ease;
+    transition: all .5s ease;
     border: 2px solid transparent;
 }
 .tes-cars:hover{
