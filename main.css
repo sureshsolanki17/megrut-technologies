@@ -299,6 +299,16 @@ body{
     border-radius: 15px;
     transition: all .5s ease-in-out;
 }
+@media screen and (max-width: 960px) {
+    .hero-h1{font-size: 48px; line-height: 48px;}
+    .hero-p{font-size: 18px;}
+    .mybtn{padding: 20px 25px; font-size: .75rem; border-radius: 10px;}
+}
+@media screen and (max-width: 500px) {
+    .hero-h1{font-size: 32px; line-height: 32px;}
+    .hero-p{font-size: 16px;}
+    .mybtn{padding: 15px 20px; font-size: .5rem; border-radius: 10px;}
+}
 .mybtn:hover{
     background-color: var(--hover-color);
 }
@@ -769,6 +779,12 @@ body{
     font-size: 18px !important;
     outline: none !important;
     border: none;
+}
+@media only screen and (max-width: 520px) {
+    .footer-form{padding: 10px 15px !important; font-size: 14px !important; width: 110px;}
+    .icon-link {font-size: 1rem; width: 1.5rem; height: 1.5rem;}
+    .icon-link::before {width: 1.5rem; height: 1.5rem;}
+    .icon-list {padding: 0 1rem; display: flex; justify-content: space-around;}
 }
 .footer-btn{
     font-weight: 600;
