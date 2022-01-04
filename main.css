@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    overflow-x: hidden;
+}
 /* --- for color  ----- */
 :root{
     --main-color: #8482EB;
@@ -15,6 +18,33 @@
     --kyabe: 'Lobster', cursive;
     --hamojha: 'Varela Round', sans-serif;
 }
+/* all heding and p tage */
+.all-h4{
+    color: #C75C6F;
+}
+.all-h1{
+    color: #fff;
+    font-size: 54px;
+}
+.all-p1{
+    color: #fff;
+    font-size: 20px;
+}
+@media screen and (max-width: 960px) {
+    .all-h4{
+        color: #C75C6F;
+        font-size: 16px;
+    }
+    .all-h1{
+        color: #fff;
+        font-size: 32px;
+    }
+    .all-p1{
+        color: #fff;
+        font-size: 14px;
+    }
+}
+/* end of h1 p1 */
 /* navgtion bar */
 .bubble-39{
     position: absolute;
@@ -166,15 +196,15 @@
 @media screen and (max-width: 960px) {
     .i-animation{
         float: right;
-        padding-right: 4rem;
-    }
+        margin-right: 3rem;
+    } 
     .drop-li{
         display: none;
         width: 250px;
         left: 250px;
     }   
     .nav-item:hover .drop-li{
-        display: block;
+        display: none !important;
         overflow: inherit;
     }
 }
@@ -275,17 +305,6 @@
 /* ------ we can do for ---- */
 .we-can-do{
     background-color: #27272E;
-}
-.wecan-h4{
-    color: #a52a2a;
-}
-.wecan-h1{
-    color: #fff;
-    font-size: 54px;
-}
-.wecan-p{
-    color: #fff;
-    font-size: 20px;
 }
 /* card */
 .cardx {
@@ -404,19 +423,26 @@
 .carousel-contein{
     display: none;
 }
-.carousel-contein h2{
+.carousel-h2{
     color: #D48290;
     font-size: 22px;
 }
-.carousel-contein > h1{
+.carousel-h1{
     font-size: 48px;
 }
-.carousel-contein p{
+.carousel-p{
     font-size: 18px;
 }
 .card-h1per{
     font-size: 72px;
     color: #D48290;
+}
+@media only screen and (max-width: 700px) {
+    .carousel-h2{font-size: 16px;}
+    .carousel-h1{font-size: 34px;}
+    .carousel-p{font-size: 14px;}
+    .card-h1per{font-size: 54px;}
+    .per-p{font-size: 14px;}
 }
 .color-chang{
     transition: all .4s ease;
@@ -463,17 +489,6 @@
 .about-form{
     border-radius: 30px;
 }
-.form-text h5{
-    color: #C75C6F;
-}
-.form-text h1{
-    font-size: 54px;
-    color: #000;
-}
-.form-text p{
-    font-size: 20px;
-    color: #000;
-}
 .form-control {
     border-radius: 15px !important;
 }
@@ -506,11 +521,19 @@
 .Project-list p{
     text-decoration: none;
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
 }
 .Project-list p:hover{
     cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .Project-list li {
+        margin-right: 24px !important;
+    }
+    .Project-list p{
+        font-size: 16px;
+    }
 }
 .Project-link{
     position: relative;
@@ -538,17 +561,6 @@
 .Case-study-section{
     background-color: #27272E;
 }
-.Case-study-section h5{
-    color: #C75C6F;
-}
-.Case-study-section h1{
-    color: #fff;
-    font-size: 54px;
-}
-.Case-study-section p{
-    color: #fff;
-    font-size: 18px;
-}
 .case-study{
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -560,10 +572,11 @@
         grid-template-columns: auto auto auto;
     }
 } */
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 700px) {
     .case-study{
         display: grid;
         grid-template-columns: auto auto;
+        grid-gap: 1%;
     }
 }
 .study-card{
@@ -582,6 +595,13 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 3%;
+}
+@media only screen and (max-width: 800px) {
+    .Testimonial-card{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 3%;
+    }
 }
 .card-imgs1 img {
     width: 125px;
@@ -602,17 +622,6 @@
 /* --------- Clients-section -------- */
 .Clients-section{
     background-color: #27272E;
-}
-.client-text h1{
-    color: #fff;
-    font-size: 54px;
-}
-.client-text h5{
-    color: #C75C6F;
-}
-.client-text p{
-    color: #d6d0d0;
-    font-size: 20px;
 }
 .Clients-list{
     display: grid;
@@ -646,17 +655,6 @@
     filter: none;
 }
 /* ----  stories section  ------ */
-.stories-text h5{
-    color: #C75C6F;
-}
-.stories-text h1{
-    font-size: 54px;
-    color: #000;
-}
-.stories-text p{
-    font-size: 20px;
-    color: #000;
-}
 /* tow block  */
 .myfas{
     margin-left: 20px;
@@ -710,13 +708,13 @@
     background-color: #FFDC60;
     color: #fff;
 }
-.work-text h5{
+/* .work-text h5{
     color: #FFDC60;
 }
 .work-text h1{
     font-size: 54px;
     color: #fff;
-}
+} */
 /* ------ footer section ----- */
 .icon-list {
     width: 100%;
@@ -727,14 +725,11 @@
 .icon-item {
     list-style: none;
 }
-.icon-item:hover{
-    color: #fff;
-}
 .icon-link {  
     display: inline-flex;
     font-size: 2rem;  
     text-decoration: none;  
-    color: var(--color-icon);
+    color: #f89524;
     width: 3rem;
     height: 3rem;  
     position: relative;
@@ -742,8 +737,8 @@
     transition: .1s linear;
     margin: auto
 }
-.icon-link:hover {
-    color: rgb(255, 255, 255) !important;
+.icon-item:hover .icon-link{
+    color: #fff;
 }
 .icon-link i {
     margin: auto;    
@@ -755,7 +750,7 @@
     left: 0;
     width: 3rem;
     height: 3rem;
-    background: rgb(248, 149, 36);
+    background: #f89524;
     border-radius: 50%;
     z-index: -2;
     transform: scale(0);
