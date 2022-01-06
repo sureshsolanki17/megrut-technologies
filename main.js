@@ -39,6 +39,21 @@ window.addEventListener("scroll", () => {
         document.querySelector("#mycard6").classList.add("slideUp");
     }
 })
+        //  brand animation slide up
+window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 5700) {
+        document.querySelector("#brand1").classList.add("slideUp");
+        document.querySelector("#brand2").classList.add("slideUp");
+        document.querySelector("#brand3").classList.add("slideUp");
+        document.querySelector("#brand4").classList.add("slideUp");
+    }
+    if (document.documentElement.scrollTop > 5900) {
+        document.querySelector("#brand5").classList.add("slideUp");
+        document.querySelector("#brand6").classList.add("slideUp");
+        document.querySelector("#brand7").classList.add("slideUp");
+        document.querySelector("#brand8").classList.add("slideUp");
+    }
+})
 /* for carosol */
 let flag = 0;
 function controler(x){
@@ -55,3 +70,7 @@ function slideshow(){
     sleid[flag].style.display = "block";
 }
 // -------  Project-section
+function displayFunc () {
+    let pwidth = document.getElementById("btnon1");
+    pwidth.classList.add("Project-link");
+}

@@ -64,6 +64,9 @@
     0% {transform: scale(0);}
     100% {transform: scale(1);}
 }
+@media screen and (max-width: 700px) {
+    .bubble-39{width: 70%;}   
+}
 /* slide navgation bar */
 /* .nav-togal-btn{
     border: 2px solid black;
@@ -78,7 +81,7 @@
 /* toggal */
 .new-navbar{
     height: 100vh;
-    width: 300px;
+    width: 280px;
     list-style: none;
     position: absolute;
     left: 0;
@@ -86,6 +89,7 @@
     background-color: #ffffff;
     animation-name: slidshowBar;
     animation-duration: 1s;
+    overflow: scroll;
     /* transition: all 1s ease; */
 }
 @keyframes slidshowBar {
@@ -145,7 +149,6 @@
     }
     
 }
-
 .nav_link, .drop-link{
     text-decoration: none;
     color: #000;
@@ -193,21 +196,6 @@
     0% {opacity: 0; transform: translateX(50px);}
     100% {opacity: 1; transform: translateX(0);}
 }
-@media screen and (max-width: 960px) {
-    .i-animation{
-        float: right;
-        margin-right: 3rem;
-    } 
-    .drop-li{
-        display: none;
-        width: 250px;
-        left: 250px;
-    }   
-    .nav-item:hover .drop-li{
-        display: none !important;
-        overflow: inherit;
-    }
-}
 .drop-li-link{
     margin-bottom: 1rem;
 }
@@ -222,42 +210,87 @@
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    padding-top: 21px;
-    padding-left: 19px;
-    text-align: center;
+    padding-right: 17px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: flex-end;
     position: relative;
 }
 .new-nav-btn{
     background-color: rgb(70, 66, 66);
 }
 .new-nav-btn div{
-    background-color: #fff !important;
+    background-color: rgb(255, 255, 255);
 }
-.nav-button-1{
-    width: 20px;
-    height: 2px;
-    margin-bottom: 5px;
+.btn-span{
     background-color: rgb(0, 0, 0);
-    transition: all .2s ease;
-}
-.nav-button-2{
-    height:4px;
-    width: 12px;
-    background-color: black;
-    margin-bottom: 5px;
-    transition: all .2s ease;
-}
-.nav-button-3{
     height: 2px;
-    width: 10px;
-    background-color: black;
-    margin-bottom: 9px;
-    transition: all .2s ease;
+    transition: all .3s ease;
 }
-.nav-button:hover .nav-button-3, .nav-button-2{
-    width: 20px;
+.btn-span1{width: 25px;}
+.btn-span2{width: 25px; margin: 5px 0; height: 4px !important;}
+.btn-span3{width: 15px;}
+.nav-button:hover .btn-span3{width: 25px;}
+.nav-button:hover .btn-span1{width: 15px;}
+@media screen and (max-width: 700px) {
+    .navbar-brandx{width: 100px !important;}
+    .nav-logo{width: 90px;}
+    .nav-button{
+        background-color: #ECF2F6;
+        height: 40px;
+        width: 40px;
+        padding-right: 12px;
+    }
+    .new-nav-btn{
+        background-color: rgb(70, 66, 66);
+    }
+    .new-nav-btn div{
+        background-color: rgb(255, 255, 255);
+    }
+    .btn-span{
+        background-color: rgb(0, 0, 0);
+        height: 2px;
+        transition: all .3s ease;
+    }
+    .btn-span1{width: 16px;}
+    .btn-span2{width: 16px; margin: 3px 0; height: 3px !important;}
+    .btn-span3{width: 8px;}
+    .nav-button:hover .btn-span3{width: 16px;}
+    .nav-button:hover .btn-span1{width: 8px;}
+}
+/* drop media for 960px */
+@media screen and (max-width: 960px) {
+    .i-animation{
+        float: right;
+        margin-right: 3rem;
+    } 
+    .drop-li{
+        width: 280px;
+        position: relative;
+        top: 0;
+        left: -32px;
+    }   
+    #drop1:hover{
+        margin-bottom: 264px;
+    }
+    #drop2:hover{
+        margin-bottom: 184px;
+    }
+    #drop3:hover{
+        margin-bottom: 264px;
+    }
+    #drop4:hover{
+        margin-bottom: 464px;
+    }
+    #drop5:hover{
+        margin-bottom: 264px;
+    }
+    .nav-item:hover .drop-li{
+        display: block !important;
+        overflow: inherit !important;
+    }
 }
 /* ------ animation for icons----- */
 .i-animation{
@@ -307,7 +340,7 @@
 @media screen and (max-width: 500px) {
     .hero-h1{font-size: 32px; line-height: 32px;}
     .hero-p{font-size: 16px;}
-    .mybtn{padding: 15px 20px; font-size: .5rem; border-radius: 10px;}
+    .mybtn{padding: 15px 20px; font-size: .75rem; border-radius: 10px;}
 }
 .mybtn:hover{
     background-color: var(--hover-color);
@@ -389,21 +422,19 @@
 }
 .card-text{
     color: #fff !important;
+    font-size: 16px;
 }
 .card-btn{
     text-decoration: none;
     font-size: 16px;
-    color: rgb(156, 107, 140);
+    color: #ffffff;
     font-weight: 600;
     transition: all .4s ease;
     position: relative;
     z-index: 1;
 }
 .cardx:hover .card-btn{
-    color: var(--hover-color);
-}
-.cardx:hover .card-btn::after{
-    width: 100%;
+    color: #9c6b8c;
 }
 .card-btn::after{
     position: absolute;
@@ -414,6 +445,25 @@
     left: 0;
     top: 110%;
     transition: all .4s ease-in;
+}
+.line-link-find{
+    display: inline-block;
+    height: 2.5px;
+    transition: all .6s ease;
+    width: 0px;
+}
+.cardx:hover .line-link-find{
+    width: 35px;
+    background-color: #9c6b8c;
+    margin-right: 10px;
+}
+@media only screen and (max-width: 520px) {
+    .card-title a{
+        font-size: 20px;
+    }
+    .card-text{
+        font-size: 14px;
+    }
 }
 /* -------------------------------- */
 .carousel-icons{
@@ -560,7 +610,6 @@
     position: absolute;
     top: 110%;
     left: 0;
-    display: none;
 }
 .main-card{
     overflow: hidden;
@@ -580,12 +629,6 @@
     grid-template-columns: auto auto auto auto;
     grid-gap: 3%;
 }
-/* @media only screen and (max-width: 700px) {
-    .case-study{
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-} */
 @media only screen and (max-width: 700px) {
     .case-study{
         display: grid;
@@ -610,12 +653,14 @@
     grid-template-columns: auto auto auto;
     grid-gap: 3%;
 }
+.card-p2{font-size: 22px;}
 @media only screen and (max-width: 800px) {
     .Testimonial-card{
         display: grid;
         grid-template-columns: auto;
         grid-gap: 3%;
     }
+    .card-p2{font-size: 16px;}
 }
 .card-imgs1 img {
     width: 125px;
@@ -641,6 +686,20 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
+.brands{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brands img {
+    filter: grayscale(70%);
+    opacity: .4;
+    transition: all .3s ease;
+}
+.brands img:hover{
+    opacity: 1;
+    filter: none;
+}
 @media only screen and (max-width: 1000px) {
     .Clients-list{
         display: grid;
@@ -652,21 +711,9 @@
         display: grid;
         grid-template-columns: auto auto;
     }
-}
-@media only screen and (max-width: 520px) {
-    .Clients-list{
-        display: grid;
-        grid-template-columns: auto;
+    .brands img {
+        width: 80%;
     }
-}
-.brands img {
-    filter: grayscale(70%);
-    opacity: .4;
-    transition: all .3s ease;
-}
-.brands img:hover{
-    opacity: 1;
-    filter: none;
 }
 /* ----  stories section  ------ */
 /* tow block  */
@@ -788,7 +835,7 @@
     .footer-form{padding: 10px 15px !important; font-size: 14px !important; width: 110px;}
     .icon-link {font-size: 1.5rem; width: 2rem; height: 2rem;}
     .icon-link::before {width: 2rem; height: 2rem;}
-    .icon-list {padding: 0 1rem; display: flex; justify-content: space-around;}
+    .icon-list {padding: 0 .25rem; display: flex; justify-content: space-around;}
 }
 .footer-btn{
     font-weight: 600;
