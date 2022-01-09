@@ -26,34 +26,40 @@ function toggleFanc() {
         document.body.style.overflow = "visible" ;
     }
 }
-// for card upswip animation 
-window.addEventListener("scroll", () => {
-    if (document.body.scrollTop > 360 || document.documentElement.scrollTop > 360) {
-        document.querySelector("#mycard1").classList.add("slideUp");
-        document.querySelector("#mycard2").classList.add("slideUp");
-        document.querySelector("#mycard3").classList.add("slideUp");
+// for slide up sroll 
+const scrollElements = document.querySelectorAll(".js-scroll");
+const elementInView = (el, dividend = 1) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+};
+const elementOutofView = (el) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+    );
+};
+const displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+};
+const hideScrollElement = (element) => {
+    element.classList.remove("scrolled");
+};
+const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+        displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+        hideScrollElement(el)
     }
-    if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
-        document.querySelector("#mycard4").classList.add("slideUp");
-        document.querySelector("#mycard5").classList.add("slideUp");
-        document.querySelector("#mycard6").classList.add("slideUp");
-    }
-})
-        //  brand animation slide up
-window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 5700) {
-        document.querySelector("#brand1").classList.add("slideUp");
-        document.querySelector("#brand2").classList.add("slideUp");
-        document.querySelector("#brand3").classList.add("slideUp");
-        document.querySelector("#brand4").classList.add("slideUp");
-    }
-    if (document.documentElement.scrollTop > 5900) {
-        document.querySelector("#brand5").classList.add("slideUp");
-        document.querySelector("#brand6").classList.add("slideUp");
-        document.querySelector("#brand7").classList.add("slideUp");
-        document.querySelector("#brand8").classList.add("slideUp");
-    }
-})
+    })
+}
+window.addEventListener("scroll", () => { 
+    handleScrollAnimation();
+});
+/* end sroll up */
 /* for carosol */
 let flag = 0;
 function controler(x){
@@ -70,7 +76,12 @@ function slideshow(){
     sleid[flag].style.display = "block";
 }
 // -------  Project-section
-function displayFunc () {
-    let pwidth = document.getElementById("btnon1");
-    pwidth.classList.add("Project-link");
+function displayFunc1() {
+    document.getElementById("btnon1").classList.toggle("Project-link")
+}
+function displayFunc2() {
+    document.getElementById("btnon2").classList.toggle("Project-link")
+}
+function displayFunc3() {
+    document.getElementById("btnon3").classList.toggle("Project-link")
 }

@@ -67,6 +67,15 @@
 @media screen and (max-width: 700px) {
     .bubble-39{width: 70%;}   
 }
+/* scroll animation */
+.js-scroll {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.js-scroll.scrolled {
+    opacity: 1;
+}
+/* end scroll animation */
 /* slide navgation bar */
 /* .nav-togal-btn{
     border: 2px solid black;
@@ -123,8 +132,8 @@
     animation-duration: 1s;
 }
 @keyframes stickynav {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {opacity: 0; transform: translateY(-100px);}
+    100% {opacity: 1; transform: translateY(0);}
 }
 /* navigation bar */
 .navbar-brandx{
@@ -231,9 +240,9 @@
 }
 .btn-span1{width: 25px;}
 .btn-span2{width: 25px; margin: 5px 0; height: 4px !important;}
-.btn-span3{width: 15px;}
+.btn-span3{width: 10px;}
 .nav-button:hover .btn-span3{width: 25px;}
-.nav-button:hover .btn-span1{width: 15px;}
+.nav-button:hover .btn-span1{width: 10px;}
 @media screen and (max-width: 700px) {
     .navbar-brandx{width: 100px !important;}
     .nav-logo{width: 90px;}
@@ -272,7 +281,7 @@
         top: 0;
         left: -32px;
     }   
-    #drop1:hover{
+    /* #drop1:hover{
         margin-bottom: 264px;
     }
     #drop2:hover{
@@ -286,10 +295,9 @@
     }
     #drop5:hover{
         margin-bottom: 264px;
-    }
+    } */
     .nav-item:hover .drop-li{
-        display: block !important;
-        overflow: inherit !important;
+        display: none !important;
     }
 }
 /* ------ animation for icons----- */
@@ -345,6 +353,14 @@
 .mybtn:hover{
     background-color: var(--hover-color);
 }
+.hero-img{
+    animation-name: heroimag;
+    animation-duration: 1s;
+}
+@keyframes heroimag {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
 /* ------ we can do for ---- */
 .we-can-do{
     background-color: #27272E;
@@ -362,21 +378,21 @@
     border: none !important;
     transition: all .3s ease;
 }
-.slideUp {
+.scrolled.slideUp {
     animation-name: slideUp;
     -webkit-animation-name: slideUp;
-    animation-duration: 2s;
-    -webkit-animation-duration: 2s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
     visibility: visible;
 }
 @keyframes slideUp {
     0% {
       opacity: 0;
-      -webkit-transform: translateY(70%);
+      transform: translateY(70%);
     } 
     100% {
       opacity: 1;
-      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
     }
 }
   
@@ -435,16 +451,6 @@
 }
 .cardx:hover .card-btn{
     color: #9c6b8c;
-}
-.card-btn::after{
-    position: absolute;
-    content: " ";
-    background-color: var(--hover-color);
-    width: 0;
-    height: 2px;
-    left: 0;
-    top: 110%;
-    transition: all .4s ease-in;
 }
 .line-link-find{
     display: inline-block;
