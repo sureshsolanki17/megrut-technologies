@@ -66,7 +66,6 @@ function controler(x){
     flag = x ;
     slideshow(flag);
 };
-
 slideshow(flag);
 function slideshow(){
     let sleid = document.getElementsByClassName("carousel-contein");

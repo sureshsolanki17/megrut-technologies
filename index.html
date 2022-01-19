@@ -37,7 +37,7 @@
                         <a class="navbar-brandx" href="#"><img class="img-fluid nav-logo" src="images/Megrut-new.png" alt=""></a>
                         <div class="close-btn" onclick="toggleFanc()"><i class="fas fa-times"></i></div>
                     </li>
-                    <li id="drop1" class="nav-item me-lg-3 me-xl-5">
+                    <li class="nav-item me-lg-3 me-xl-5">
                         <a class="nav_link" href="#">Digital Agency &nbsp; <i class="fas fa-chevron-down i-animation"></i></a>
                         <ul class="drop-li">
                             <li class="drop-li-link"><a class="drop-link" href="#">Digital Agency</a>
@@ -47,7 +47,7 @@
                             <li class="drop-li-link"><a class="drop-link" href="#">Corporate Agency</a></li> 
                         </ul>
                     </li>
-                    <li id="drop2" class="nav-item me-lg-3 me-xl-5">
+                    <li class="nav-item me-lg-3 me-xl-5">
                         <a class="nav_link" href="#">Services &nbsp; <i class="fas fa-chevron-down i-animation"></i></a>
                         <ul class="drop-li">
                             <li class="drop-li-link"><a class="drop-link" href="#">Service</a>
@@ -55,7 +55,7 @@
                             <li class="drop-li-link"><a class="drop-link" href="#">Service Details</a></li> 
                         </ul>
                     </li>
-                    <li id="drop3" class="nav-item me-lg-3 me-xl-5">
+                    <li class="nav-item me-lg-3 me-xl-5">
                         <a class="nav_link" href="#">Portfolio &nbsp; <i class="fas fa-chevron-down i-animation"></i></a>
                         <ul class="drop-li">
                             <li class="drop-li-link"><a class="drop-link" href="">Two Column</a></li> 
@@ -65,7 +65,7 @@
                             <li class="drop-li-link"><a class="drop-link" href="">Four Column Width</a></li>
                         </ul>
                     </li>
-                    <li id="drop4" class="nav-item me-lg-3 me-xl-5">
+                    <li class="nav-item me-lg-3 me-xl-5">
                         <a class="nav_link" href="#">Pages &nbsp; <i class="fas fa-chevron-down i-animation"></i></a>
                         <ul class="drop-li">
                             <li class="drop-li-link"><a class="drop-link" href="#">About Us</a>
@@ -80,7 +80,7 @@
                             <li class="drop-li-link"><a class="drop-link" href="#">Typography</a></li>
                         </ul>
                     </li>
-                    <li id="drop5" class="nav-item me-lg-3 me-xl-5">
+                    <li class="nav-item me-lg-3 me-xl-5">
                         <a class="nav_link" href="#">Blogs &nbsp; <i class="fas fa-chevron-down i-animation"></i></a>
                         <ul class="drop-li">
                             <li class="drop-li-link"><a class="drop-link" href="#">Standard Post</a></li> 
@@ -108,7 +108,7 @@
                 <div class="col-12 col-lg-6 hero-contein">
                     <h1 class="hero-h1 mb-lg-3 mb-1">Digital product <br> design agency</h1>
                     <p class="hero-p">Create live segments and target the right people for messages <br> based on their behaviors.</p>
-                    <a href="#"><button class="mybtn mt-lg-4 mt-md-3 mt-sm-1"> Get Starteds</button></a>
+                    <a class="btn-hover" href="#"><button class="mybtn mt-lg-4 mt-md-3 mt-sm-1"> Get Starteds</button></a>
                 </div>
                 <div class="col-12 col-lg-6 d-none d-lg-block mt-xl-5 mt-lg-4">
                     <img class="hero-img" style="width: 100%;" src="images/undraw_online_learning_re_qw08.svg" alt=""><!-- background image  -->
@@ -238,20 +238,19 @@
             </div>
         </div>
     </div>
-    <div class="container pb-sm-5 pt-sm-5 pb-3 pt-3">
+    <div class="container pb-sm-5 pt-sm-5 pb-3 pt-3"> <!-- carosal -->
         <div class="row pt-3 pb-3 pb-sm-5 pt-sm-5">
             <div class="col-12 col-lg-5">
-                <div class="carousel-card">
-                    <div class="carousel-under">
-                        <!-- 1 -->
-                        <div class="carousel-contein">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000"> <!-- 1 -->
                             <h2 class="carousel-h2 pt-lg-3 pt-md-2 mt-2 pb-lg-3 mb-md-2 mb-2">Featured case study</h2>
                             <h1 class="carousel-h1">Logo, identity & web design for Uber</h1>
-                            <p class="carousel-p mt-lg-5 mt-md-4 mt-4 mb-lg-4 mb-md-3 mb-4 pe-5">
+                            <p class="carousel-p mt-lg-4 mt-md-3 mt-4 mb-lg-4 mb-md-3 mb-4 pe-5">
                                 Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.
                             </p>
-                            <a href="#"><button class="mybtn mt-2">Read Case Study</button></a>
-                            <div class="row mt-5 pt-2">
+                            <a class="btn-hover" href="#"><button class="mybtn mt-2">Read Case Study</button></a>
+                            <div class="row mt-4 pt-2">
                                 <div class="col-5">
                                     <h1 class="card-h1per">1%</h1>
                                     <p class="per-p">ROI increase</p>
@@ -262,15 +261,14 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 2 -->
-                        <div class="carousel-contein">
+                        <div class="carousel-item" data-bs-interval="2000">  <!-- 2 -->
                             <h2 class="carousel-h2 pt-lg-3 pt-md-2 mt-2 pb-lg-3 mb-md-2 mb-2">Featured Case Study</h2>
                             <h1 class="carousel-h1">Website and web Development, Design</h1>
-                            <p class="carousel-p mt-lg-5 mt-md-4 mt-4 mb-lg-4 mb-md-3 mb-4 pe-5">
+                            <p class="carousel-p mt-lg-4 mt-md-3 mt-4 mb-lg-4 mb-md-3 mb-4 pe-5">
                                 Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi.  Vestibulum   eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.
                             </p>
-                            <a href="#"><button class="mybtn mt-2">Read Case Study</button></a>
-                            <div class="row mt-5 pt-2">
+                            <a class="btn-hover" href="#"><button class="mybtn mt-2">Read Case Study</button></a>
+                            <div class="row mt-4 pt-2">
                                 <div class="col-5">
                                     <h1 class="card-h1per">2%</h1>
                                     <p class="per-p">ROI increase</p>
@@ -281,16 +279,15 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 3 -->
-                        <div class="carousel-contein">
+                        <div class="carousel-item">   <!-- 3 --> 
                             <h2 class="carousel-h2 pt-lg-3 pt-md-2 mt-2 pb-lg-3 mb-md-2 mb-2">Featured Case Study</h2>
-                            <h1 class="carousel-h1">Branding, website &amp; digital marketing for Apple</h1>
-                            <p class="carousel-p mt-lg-5 mt-md-4 mt-4 mb-lg-4 mb-md-3 mb-4 pe-5">
+                            <h1 class="carousel-h1">Website and web Development, Design</h1>
+                            <p class="carousel-p mt-lg-4 mt-md-3 mt-4 mb-lg-4 mb-md-3 mb-4 pe-5">
                                 Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis.
                                 Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.
                             </p>
-                            <a href="#"><button class="mybtn mt-2">Read Case Study</button></a>
-                            <div class="row mt-5 pt-2">
+                            <a class="btn-hover" href="#"><button class="mybtn mt-2">Read Case Study</button></a>
+                            <div class="row mt-4 pt-2">
                                 <div class="col-5">
                                     <h1 class="card-h1per">3%</h1>
                                     <p class="per-p">ROI increase</p>
@@ -300,12 +297,12 @@
                                     <p class="per-p">Monthly website visits</p>
                                 </div>
                             </div>
-                        </div>
+                        </div>   <!-- end 3 -->
                     </div>
-                    <div class="mt-4 mt-lg-4">
-                        <span ><button class="cor-btn1" onclick="controler(0)"></button></span>
-                        <span ><button class="cor-btn2" onclick="controler(1)"></button></span>
-                        <span ><button class="cor-btn3" onclick="controler(2)"></button></span>
+                    <div class="carousel-indicators">  <!-- buttons -->
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                 </div>
             </div>
