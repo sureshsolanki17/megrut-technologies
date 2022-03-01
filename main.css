@@ -33,7 +33,7 @@
     color: #fff;
     font-size: 20px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
     .all-h4{
         color: #C75C6F;
         font-size: 16px;
@@ -155,7 +155,7 @@
     justify-content: space-between;
     flex-direction: row !important;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
     .navbar-nav{
         display: none !important;
     }
@@ -195,7 +195,7 @@
     width: 250px;
     border-radius: 8px;
     position: absolute;
-    top: 76px;
+    top: 68px;
     padding: 2rem;
     list-style: none;
     background-color: #fff;
@@ -214,8 +214,13 @@
 .drop-li-link:hover .drop-link::after{
     width: 100%;
 }
-.nav-item:hover .drop-li{
-    display: block;
+.drop-li-link:hover .drop-link{
+    color: var(--hover-color);
+}
+@media (min-width: 992px) {
+    .nav-item:hover .drop-li{
+        display: block;
+    }
 }
 .nav-button{
     background-color: #ECF2F6;
@@ -273,8 +278,8 @@
     .nav-button:hover .btn-span3{width: 16px;}
     .nav-button:hover .btn-span1{width: 8px;}
 }
-/* drop media for 960px */
-@media screen and (max-width: 960px) {
+/* drop media for 992px */
+@media screen and (max-width: 992px) {
     .i-animation{
         float: right;
         margin-right: 3rem;
@@ -298,7 +303,7 @@
     padding: 20vh 0;
 }
 .hero-h1{
-    font-size: 72px;
+    font-size: 60px;
     font-weight: 600;
     line-height: 72px;
     font-family: var(--heding-font);
@@ -339,13 +344,13 @@
     transition: all .5s ease;
     z-index: -1;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
     .hero-h1{font-size: 48px; line-height: 48px;}
     .hero-p{font-size: 18px;}
     .mybtn{padding: 20px 25px; font-size: .75rem; border-radius: 10px;}
 }
 @media screen and (max-width: 500px) {
-    .hero-h1{font-size: 32px; line-height: 32px;}
+    .hero-h1{font-size: 46px; line-height: 32px;}
     .hero-p{font-size: 16px;}
     .mybtn{padding: 15px 20px; font-size: .75rem; border-radius: 10px;}
 }
@@ -453,7 +458,7 @@
 }
 .line-link-find{
     display: inline-block;
-    height: 2.5px;
+    height: 1.5px;
     transition: all .6s ease;
     width: 0px;
 }
@@ -516,21 +521,6 @@
 }
 .active {
     background-color: #fff;
-}
-@media only screen and (max-width: 900px) {
-    
-}
-@media only screen and (max-width: 700px) {
-    
-}
-@media only screen and (max-width: 520px) {
-    
-}
-.carousel-under{
-    overflow: hidden;
-}
-.carousel-contein{
-    display: none;
 }
 .carousel-h2{
     color: #D48290;
@@ -640,14 +630,6 @@
 .Project-list p:hover{
     cursor: pointer;
 }
-@media only screen and (max-width: 600px) {
-    .Project-list li {
-        margin-right: 24px !important;
-    }
-    .Project-list p{
-        font-size: 16px;
-    }
-}
 .Project-link{
     position: relative;
 } 
@@ -662,12 +644,47 @@
 }
 .main-card{
     overflow: hidden;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 .card-img{
     transition: all .5s ease;
 }
 .card-img:hover{
     transform: scale(1.15);
+}
+.bottom-btn-line {
+    position: relative;
+}
+.bottom-btn-line::after{
+    content: " ";
+    background-color: #1115fd;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 103%;
+    left: 0;
+}
+       /* project animation */
+.branding.brabd_block{
+    display: none;
+}
+.development.dev_none{
+    display: none;
+}
+@media only screen and (max-width: 800px) {
+    .Project-list li {
+        margin-right: 60px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .Project-list li {
+        margin-right: 24px !important;
+    }
+    .Project-list p{
+        font-size: 16px;
+    }
 }
 /* Case-study-section */
 .Case-study-section{
@@ -801,7 +818,7 @@
 /* ---------- work-section -------- */
 .work-section{
     background: rgb(61,86,227);
-    background: linear-gradient(90deg, rgba(61,86,227,1) 0%, rgba(67,130,210,1) 100%);
+    background: linear-gradient(85deg, rgb(0 37 243) 0%, rgb(136 178 233) 100%);
 }
 .work-btn{
     text-decoration: none;
@@ -816,7 +833,7 @@
 }
 .work-btn:hover{
     background-color: #FFDC60;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 /* .work-text h5{
     color: #FFDC60;
